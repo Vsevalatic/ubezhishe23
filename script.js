@@ -43,3 +43,27 @@ function closeQR() {
     document.getElementById('qr-container').style.display = 'none';
     document.getElementById('overlay').style.display = 'none';
 }
+
+
+
+
+
+let lastScrollTop = 0;
+const header = document.querySelector("header");
+const nav = document.querySelector(".menu"); // Меню навигации
+const headerHeight = header.offsetHeight;
+const navHeight = nav.offsetHeight; // Высота меню
+
+window.addEventListener("scroll", () => {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && scrollTop > headerHeight - navHeight) {
+        // Если скроллим вниз и скрыли верхнюю часть шапки — поднимаем её
+        header.style.transform = `translateY(-${headerHeight - navHeight}px)`;
+    } else if (scrollTop < lastScrollTop) {
+        // Если скроллим вверх — полностью показываем шапку
+        header.style.transform = "translateY(0)";
+    }
+
+    lastScrollTop = scrollTop;
+});
