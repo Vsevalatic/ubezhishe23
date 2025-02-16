@@ -28,7 +28,7 @@ header {
 
 .hair{
     color: #2B2A28;
-    padding-inline: 5.5vh;
+    padding-inline: 2.5%;
     padding-bottom: 10px;
     display: flex;
 }
@@ -613,6 +613,7 @@ footer {
     .product {
         width: 90%;
     }
+
 }
 
 .ml img{
@@ -643,4 +644,133 @@ footer {
 
 .sales a:hover{
     color:white;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url(fon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    scroll-padding-top: 220px;
+    scroll-behavior: smooth;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #FECD28;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 800;
+}
+
+.logo {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 30%;
+    height: auto;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.menu button {
+    background-color: #2B2A28;
+    color: #FECD28;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.menu button:hover {
+    transform: scale(1.05);
+}
+
+/* Основной контент */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.podlozka {
+    background-color: #2B2A28;
+    width: 90%;
+    max-width: 1100px;
+}
+
+.podlozka img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.aboutus p {
+    color: white;
+    text-align: justify;
+    text-indent: 30px;
+}
+
+
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 1024px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu button {
+        width: 80%;
+    }
+    .podlozka {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 80px;
+    }
+    .gallery img {
+        max-width: 90%;
+    }
+    .podlozka {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu button {
+        width: 100%;
+    }
+    .gallery img {
+        max-width: 100%;
+    }
+    .podlozka {
+        padding: 10px;
+    }
+}
+
+.header{
+    border-bottom: 10px, #2B2A28;
 }
