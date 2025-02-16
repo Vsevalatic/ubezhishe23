@@ -108,7 +108,6 @@ html {
     
     scroll-behavior: smooth;
 
-    background-color: #FECD28;
 }
 
 
@@ -744,6 +743,7 @@ header {
     }
     main {
         padding-top: 15%;
+        background-color: #FECD28;
     }
 
     .footer{
@@ -816,4 +816,4 @@ main {
     padding-top: 9%;
 }
 
-.body{background-color: #FECD28;}
+
