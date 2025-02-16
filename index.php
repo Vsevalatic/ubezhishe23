@@ -23,7 +23,6 @@
             <div class="hair"><a href="#sixth"><h2>Контакты</h2></a></div>
             <div class="hair"><button id="showQRBtn"><h2 style="color: #FECD28;">Забронировать</h2></button></div>
         </div>
-        <div class="create-line"></div>
     </header>
     <main>
       
