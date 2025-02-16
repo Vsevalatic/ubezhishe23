@@ -9,7 +9,7 @@
 header {
     background-color: #FECD28;
     text-align: center;
-    position: sticky;
+
     top: 0;
     z-index: 800;
 }
@@ -594,6 +594,7 @@ footer {
 
     footer {
         padding: 20px 10px;
+        width: 1100px;
     }
 
     .contact-info {
@@ -661,14 +662,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Шапка сайта */
-header {
-    background-color: #FECD28;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 800;
-}
 
 .logo {
     height: 100px;
@@ -705,7 +698,6 @@ header {
     transform: scale(1.05);
 }
 
-/* Основной контент */
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -729,28 +721,13 @@ header {
     text-indent: 30px;
 }
 
-
-
-/* Медиа-запросы для адаптивности */
 @media (max-width: 1024px) {
     .menu {
         flex-direction: column;
         align-items: center;
-        width: 1100px;
-    }
-    .header{
-        position: static;
-    }
-    main {
-        padding-top: 15%;
-        background-color: #FECD28;
+
     }
 
-    .footer{
-        flex-direction: column;
-        align-items: center;
-        width: 1100px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -768,9 +745,7 @@ header {
         align-items: center;
         width: 1100px;
     }
-    main {
-        padding-top: 15%;
-    }
+
 }
 
 @media (max-width: 480px) {
@@ -799,7 +774,7 @@ header {
 }
 
 header {
-    position: fixed;
+
     top: 0;
     left: 0;
     width: 100%;
@@ -809,11 +784,12 @@ header {
 
 @media (max-width: 1024px) {
     header {
-        position: static; /* Делаем шапку статичной на маленьких экранах */
+        width: 1100px;
     }
+
 }
 main {
-    padding-top: 9%;
+
 }
 
 
