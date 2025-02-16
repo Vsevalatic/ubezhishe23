@@ -40,7 +40,7 @@ header {
 }
 
 .hair h2{
-    font-size: 25px;
+    font-size: 160%;
     color: #2B2A28;
 }
 
@@ -107,6 +107,8 @@ html {
     scroll-padding-top: 220px;
     
     scroll-behavior: smooth;
+
+    background-color: #FECD28;
 }
 
 
@@ -679,6 +681,7 @@ header {
 .logo img {
     max-width: 30%;
     height: auto;
+    margin: 10px;
 }
 
 .menu {
@@ -713,11 +716,7 @@ header {
     padding: 20px;
 }
 
-.podlozka {
-    background-color: #2B2A28;
-    width: 90%;
-    max-width: 1100px;
-}
+
 
 .podlozka img {
     max-width: 100%;
@@ -738,12 +737,13 @@ header {
     .menu {
         flex-direction: column;
         align-items: center;
+        width: 1100px;
     }
-    .menu button {
-        width: 80%;
+    .header{
+        position: static;
     }
-    .podlozka {
-        width: 95%;
+    main {
+        padding-top: 15%;
     }
 }
 
@@ -757,9 +757,18 @@ header {
     .podlozka {
         padding: 15px;
     }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        width: 1100px;
+    }
+    main {
+        padding-top: 15%;
+    }
 }
 
 @media (max-width: 480px) {
+
     .menu button {
         width: 100%;
     }
@@ -769,8 +778,27 @@ header {
     .podlozka {
         padding: 10px;
     }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        width: 1100px;
+    }
+    main {
+        padding-top: 15%;
+    }
 }
 
 .header{
     border-bottom: 10px, #2B2A28;
+}
+
+header {
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+main {
+    padding-top: 9%;
 }
