@@ -50,20 +50,31 @@ function closeQR() {
 
 let lastScrollTop = 0;
 const header = document.querySelector("header");
-const nav = document.querySelector(".menu"); // Меню навигации
+const nav = document.querySelector(".menu");
 const headerHeight = header.offsetHeight;
-const navHeight = nav.offsetHeight; // Высота меню
+const navHeight = nav.offsetHeight;
+const breakpoint = 1024;
 
-window.addEventListener("scroll", () => {
+function handleScroll() {
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-    if (scrollTop > lastScrollTop && scrollTop > headerHeight - navHeight) {
-        // Если скроллим вниз и скрыли верхнюю часть шапки — поднимаем её
-        header.style.transform = `translateY(-${headerHeight - navHeight}px)`;
-    } else if (scrollTop < lastScrollTop) {
-        // Если скроллим вверх — полностью показываем шапку
+    if (window.innerWidth > breakpoint) {
+        // Если скроллим вниз и прошли верхнюю часть шапки - скрываем её до меню
+        if (scrollTop > lastScrollTop && scrollTop > headerHeight - navHeight) {
+            header.style.transform = `translateY(-${headerHeight - navHeight}px)`;
+        } 
+        // Если скроллим вверх - показываем шапку полностью
+        else if (scrollTop < lastScrollTop) {
+            header.style.transform = "translateY(0)";
+        }
+    } else {
+        // На экранах ≤1024px шапка всегда статична
         header.style.transform = "translateY(0)";
     }
 
     lastScrollTop = scrollTop;
-});
+}
+
+// Навешиваем обработчик событий при загрузке и изменении размера окна
+window.addEventListener("scroll", handleScroll);
+window.addEventListener("resize", handleScroll);
