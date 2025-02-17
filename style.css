@@ -764,9 +764,7 @@ body {
         align-items: center;
         width: 1100px;
     }
-    main {
-        padding-top: 15%;
-    }
+
 }
 
 .header{
@@ -803,7 +801,7 @@ header {
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .telo{
         padding-top: 0;
     }
