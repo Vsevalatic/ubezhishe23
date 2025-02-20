@@ -791,7 +791,10 @@ header {
     .telo{
         padding-top: 0;
     }
+    header {
 
+        position: static;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -805,5 +808,28 @@ header {
     .telo{
         padding-top: 0;
     }
+    .products{
+        max-width: 100%;
+    }
+}
+
+html {
+    zoom: 1; /* Обычный размер */
+}
+
+@media (max-width: 1600px) {
+    html { zoom: 0.9; }
+}
+
+@media (max-width: 1200px) {
+    html { zoom: 0.8; }
+}
+
+@media (max-width: 100px) {
+    html { zoom: 0.7; }
+}
+
+@media (max-width: 800px) {
+    html { zoom: 0.67; }
 }
 
