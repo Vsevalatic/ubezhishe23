@@ -44,7 +44,7 @@ html{
 }
 
 html {
-    zoom: 1; /* Обычный размер */
+    zoom: 1; 
 }
 
 @media (max-width: 1600px) {
@@ -55,9 +55,6 @@ html {
     html { zoom: 0.8; }
 }
 
-@media (max-width: 100px) {
-    html { zoom: 0.7; }
-}
 
 @media (max-width: 800px) {
     html { zoom: 0.67; }
