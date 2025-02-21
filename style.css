@@ -772,7 +772,7 @@ body {
 }
 
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -792,17 +792,11 @@ header {
         padding-top: 0;
     }
     header {
-
         position: static;
     }
 }
 
-@media (min-width: 1024px) {
-    .telo{
-        padding-top: 19vh;
-    }
 
-}
 
 @media (max-width: 768px) {
     .telo{
